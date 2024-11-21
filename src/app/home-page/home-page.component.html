@@ -1,0 +1,45 @@
+<div class="home-page">
+    <div class="search">
+        <input class="search-input" type="text" placeholder="Search">      
+    </div>
+    <div>
+        <h3 style="margin-bottom: 6px;">Popular items </h3>
+        <div class="main">
+            <div  *ngFor="let item of burgerData; let i =index" >
+                <div class="burgr_class" *ngIf="item.category==='popular'" (click)="$event.preventDefault();$event.stopPropagation();productDetails(item,i)">
+                    <img src="{{item.image}}" class="burger-img">
+                    <p style="margin: 0px 5px;">{{item.name}}</p>
+                    <span>{{item.price}}</span>
+                    <div class="button-class" *ngIf="burgerData[i].quantity ===0" ><button (click)="$event.preventDefault();$event.stopPropagation();productAdded(item,i)" class="btn">Add to cart</button></div>
+                    <div class="button-class"  *ngIf="burgerData[i].quantity !==0" ><button (click)="$event.preventDefault();$event.stopPropagation();productAdded(item,i)" class="btn">Added</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h3 style="margin-bottom: 6px;">Special offers </h3>
+        <div class="main">
+            <div  *ngFor="let item of burgerData; let i=index" >
+                <div class="burgr_class" *ngIf="item.category==='special'" (click)="productDetails(item,i)">
+                    <img src="{{item.image}}" class="burger-img">
+                    <p style="margin: 0px 5px;">{{item.name}}</p>
+                    <span>{{item.price}}</span>
+                    <button class="btn">Add to cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h3 style="margin-bottom: 6px;">New Arrivals</h3>
+        <div class="main">
+            <div  *ngFor="let item of burgerData let i=index" >
+                <div class="burgr_class" *ngIf="item.category==='new'" (click)="productDetails(item,i)">
+                    <img src="{{item.image}}" class="burger-img">
+                    <p style="margin: 0px 5px;">{{item.name}}</p>
+                    <span>{{item.price}}</span>
+                    <button class="btn">Add to cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

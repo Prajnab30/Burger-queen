@@ -1,0 +1,46 @@
+.home-page {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+.search{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+.search-input{
+    width:45%;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+.burgr_class{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px 18px;
+    border: 2px solid yellow;
+    border-radius: 5px;
+    width:80%;
+    height: 100%;
+    cursor: pointer;
+    
+}
+.main{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    flex-wrap: wrap;
+    margin-left: 35px;
+}
+.burger-img{
+    width: 80%;
+}
+.button-class{
+    margin: 8px 0px;
+}
+.btn {
+    border: none;
+    border-radius: 5px;
+    background-color: #f1f105;
+    padding: 7px;
+}

@@ -1,0 +1,20 @@
+<div class="main-class">
+    <div class="product-class">
+        <div class="product-columns">
+            <div class="left-column">
+                <div class="prod-description-img"><img src="{{currentProduct.image}} " class="prod-image"></div>
+                <div class="prod-name"><h4 class="description">{{currentProduct.name}}</h4>
+                <h5 class="description">{{currentProduct.price}}</h5></div>
+                <!-- <p>Rating 4 *</p> -->
+                <div *ngIf="productQuantity !=0" class="quantity">
+                    <h4 style="position: relative;right: 27px; margin: 0px; font-family: sans-serif;">Product Quantity</h4>
+                    <div class="prodQuantity-class"><button class="buttn" (click)="increment(currentProduct)">+</button><span style="font-size: 16px;font-family: sans-serif;">{{productQuantity}}</span><button class="buttn" (click)="decrement(currentProduct.id)">-</button></div>
+                </div> 
+            </div>
+            <div class="right-column">
+                <h4>Product Details</h4>
+                <p>Lorem ipsum dolor sit amet. Ex laborum dignissimos et molestiae voluptatem ea facere autem sit possimus obcaecati aut repellat commodi non fuga placeat est reprehenderit libero. Vel voluptas delectus sed tenetur odio rem consequatur quam et dignissimos nisi et quia architecto qui fugit consequatur vel voluptate libero.</p>
+            </div>
+        </div>
+    </div>
+</div>
